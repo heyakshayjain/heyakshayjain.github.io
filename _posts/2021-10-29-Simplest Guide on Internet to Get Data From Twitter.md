@@ -1,14 +1,13 @@
 In this Blog I'll show you how can you pull the data or tweets from twitter using Twitter API.
 Follow the steps below -
 
- 1. In order to get Twitter href="https://twitter.com" API access You need to sign up on the Twitter developer page - href="https://developer.twitter.com/"  
+ 1. In order to get [Twitter](https://twitter.com) API access You need to sign up on the [Twitter developer page](https://developer.twitter.com/) 
 
-For Your help You can refer this -
-> href="https://developer.twitter.com/en/docs/tutorials/step-by-step-guide-to-making-your-first-request-to-the-twitter-api-v2"
+For Your help You can refer this - [Twitter developer page Guide](https://developer.twitter.com/en/docs/tutorials/step-by-step-guide-to-making-your-first-request-to-the-twitter-api-v2)
  
  Now your Twitter developer account is ready and Hopefully you have all the keys and token saved in your system.If Not,Don't worry Just generate them again and Save it at a safe place this time.Now it's Time to write code/script. For this we are going to use Python.
  
- 2. Install Python and Tweepy (href="https://docs.tweepy.org/en/stable/") and Pandas (href="https://pandas.pydata.org/docs/").
+ 2. Install Python and [Tweepy](https://docs.tweepy.org/en/stable/) and [Pandas](https://pandas.pydata.org/docs/).
  3.  Now we are All set to write a script using Python and Don't forget to Thank Amazing libraries available in Python which will make it really easy for us.
  
 
