@@ -7,7 +7,7 @@ Recently, In an interview, I was asked -
 > Do you know Data Mesh?
 My answer - Sorry, I Don't Know right now!
 
-So, I don’t want my friends to face the same situation. I’m taking some time to do my research and I guarantee! After reading this blog you will be able to explain it in the simplest way possible.
+So, I don’t want my friends to face the same situation. I’m taking some time to do my research and After reading this blog you will be able to explain it in the simplest way possible.
 So, Let's Start First Let's try to Remember all things we know so far! 
 **[Data Warehouse, Data Mart, Data Lake](http://akshayjain.tech/2022/10/30/Data-Warhouse-vs-Data-Lake-vs-Data-mart.html)**, You can read about them in my previous blog and I recommended you to understand them first, before going forward in this blog.
 
