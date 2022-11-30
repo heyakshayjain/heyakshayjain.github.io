@@ -21,6 +21,8 @@ As you know data is getting generated every second. There is a constant need to 
 It was first ever introduced by [Zhamak Dehghani](https://www.linkedin.com/in/zhamak-dehghani/). I recommend you to go through this fun interview at [Data Talks Club](https://www.youtube.com/watch?v=346N_pCtYZU).In this interview, she explained about data mesh in her own words and some precious information as well.
 ![Generic mesh diagram](https://www.k2view.com/hs-fs/hubfs/Generic%20mesh%20diagram.png?width=936&name=Generic%20mesh%20diagram.png)
 
+Image Credits -https://www.k2view.com/what-is-data-mesh
+
 > **In Simple Terms, Data Mesh is a type of data platform architecture that is decentralized, so that data can be made available to everyone**.
 
 However, Data Fabric does the opposite and it's a centralized data platform architecture where ownership lies with the central system and data can be accessed through it.
