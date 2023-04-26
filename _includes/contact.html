@@ -33,27 +33,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   <script>
   function submitForm() {
-    var form = document.forms["contactForm"];
-    
-    var email = form.elements["email"].value;
-    var firstname = form.elements["first_name"].value;
-    var lastname = form.elements["last_name"].value;
-    var phone = form.elements["phone"].value;
-    var message = form.elements["message"].value;
-
-    var data = { "first_name": firstname,"last_name":lastname, "email": email, "message": message, "phone":phone };
     var url = "https://script.google.com/macros/s/AKfycbxnlFsAcJelRfium6zFJ_VJXPNkEIVWk8LhlO_Zsd85h1rfjSJTfbXZN1oaLNql_g8X/exec";
-
-    fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      cache: "no-cache",
-      body: JSON.stringify(data),
-    }).then(function(response) {
-      form.reset();
-      alert("Your message has been sent!");
-    });
+var options = {
+  "method": "post",
+  "payload": {
+    "email": document.getElementById("email").value,
+    "first_name": document.getElementById("first_name").value,
+    "last_name": document.getElementById("last_name").value,
+    "phone": document.getElementById("phone").value,
+    "message": document.getElementById("message").value
   }
+};
+UrlFetchApp.fetch(url, options);
+
 </script>
 
 </html>
