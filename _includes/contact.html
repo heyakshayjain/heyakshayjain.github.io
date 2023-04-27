@@ -1,6 +1,6 @@
 <html>
   <head><link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" /></head>
-<form id="contactForm" onsubmit="submitForm(); return false;">
+<form id="contactForm" method="post" action="https://script.google.com/macros/s/AKfycbxnlFsAcJelRfium6zFJ_VJXPNkEIVWk8LhlO_Zsd85h1rfjSJTfbXZN1oaLNql_g8X/exec">">
 
 
   <div class="relative z-0 w-full mb-6 group">
@@ -31,21 +31,7 @@
   <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 </form>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
- <script>
-function submitForm() {
-  var email = document.getElementById("email").value;
-  var first_name = document.getElementById("first_name").value;
-  var last_name = document.getElementById("last_name").value;
-  var phone = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
-  
-  google.script.run.withSuccessHandler(function() {
-    alert('Success!');
-  }).withFailureHandler(function() {
-    alert('Error!');
-  }).processForm(email, first_name, last_name, phone, message);
-}
-</script>
+
 
 
 </html>
