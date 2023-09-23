@@ -10,7 +10,6 @@ So, What is Data then?
 Data can be a collection of numbers, facts, text, files, and almost everything in the digital world (Arguably!).
 There is this nice Image which shows *Types of data* -
 
-https://en.wikipedia.org/wiki/Data#/media/File:Data_types_-_en.svg
 
 ![undefined](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Data_types_-_en.svg/800px-Data_types_-_en.svg.png)
 
@@ -18,7 +17,7 @@ Now, It's time for the second word **What is Engineering**?
 Engineering words remind me of Engineers. Engineers are people who do stuff like practical stuff. So, I made this definition that Engineering is an application or Practical implementation of ideas, maths, and theories.  
 
 
-![Types of Engineering Degrees: Your Guide | Coursera](https://images.ctfassets.net/wp1lcwdav1p1/5VQnRNELq1177o5tuvcoBM/e032e3e6169232f30af2a63741c9fc20/Teamwork-in-construction-industry---two-engineers-working-together-on-construction-site-with-blueprints-and-plans-645373486.jpeg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive)
+![Types of Engineering Degrees](https://images.ctfassets.net/wp1lcwdav1p1/5VQnRNELq1177o5tuvcoBM/e032e3e6169232f30af2a63741c9fc20/Teamwork-in-construction-industry---two-engineers-working-together-on-construction-site-with-blueprints-and-plans-645373486.jpeg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive)
 
 
 Now, that we have covered both words let's jump right back to "**Data Engineering**". 
