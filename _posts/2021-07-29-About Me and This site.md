@@ -18,4 +18,4 @@ I'm constantly seeking opportunities to learn and grow in the ever-evolving fiel
 
 **Let's Connect!**
 
-I'm passionate about collaborating with like-minded individuals and working together on groundbreaking data-driven projects. Feel free to reach out to me through [your contact information]!
+I'm passionate about collaborating with like-minded individuals and working together on groundbreaking data-driven projects. Feel free to reach out to me through mail at heyakshayjain@gmail.com
