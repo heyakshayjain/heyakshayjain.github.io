@@ -2,7 +2,7 @@
 
 ## Akshay Jain
 
-**Your Data Guy **
+**Your Data Guy**
 
 I'm Akshay Jain, a data engineer currently working for a leading European energy provider. I'm passionate about using data engineering, machine learning, and cutting-edge software development technologies to create innovative solutions that empower organizations.  
 
