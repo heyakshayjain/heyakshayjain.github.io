@@ -1,16 +1,6 @@
-
-
-## Akshay Jain
-
 **Your Data Guy**
 
 I'm Akshay Jain, a data engineer currently working for a leading European energy provider. I'm passionate about using data engineering, machine learning, and cutting-edge software development technologies to create innovative solutions that empower organizations.  
-
-In my current role, I help the organization:
-
-* Design and implement data pipelines for efficient data collection, processing, and storage.
-* Develop and deploy machine learning models (predictive and forecasting) for time series data analysis.
-* Stay up-to-date on the latest software development frameworks to identify and implement the most suitable solutions.
 
 My expertise lies in two key areas:
 
@@ -25,15 +15,15 @@ I leverage a diverse range of tools and technologies to tackle data challenges:
 
 I leverage a diverse range of tools and technologies to tackle data challenges:
 
-<div style="display: flex; flex-wrap: wrap;"> <img src="https://github.com/user-attachments/assets/048cb52b-54c7-40bc-aad7-40d2ab2100c4" alt="Logo" style="width: 50px; height: 50px;">  <img src="https://github.com/user-attachments/assets/49badba2-bdb6-4b85-a525-ba2cd430a5b4" alt="Logo" style="width: 50px; height: 50px;">
+<div style="display: flex; flex-wrap: wrap;"> <img src="https://github.com/user-attachments/assets/048cb52b-54c7-40bc-aad7-40d2ab2100c4" alt="Logo" style="width: 100px; height: 100px;">  <img src="https://github.com/user-attachments/assets/49badba2-bdb6-4b85-a525-ba2cd430a5b4" alt="Logo" style="width: 100px; height: 100px;">
 &nbsp;
-  <img src="https://github.com/user-attachments/assets/c0ab665f-0494-4d11-b26a-a4fd5526e4c5" alt="Logo" style="width: 50px; height: 50px;">
+  <img src="https://github.com/user-attachments/assets/c0ab665f-0494-4d11-b26a-a4fd5526e4c5" alt="Logo" style="width: 100px; height: 100px;">
 &nbsp;
-  <img src="https://github.com/user-attachments/assets/292de91f-d3ee-49d8-b28c-2d8a12a2030d" alt="Logo" style="width: 50px; height: 50px;">
+  <img src="https://github.com/user-attachments/assets/292de91f-d3ee-49d8-b28c-2d8a12a2030d" alt="Logo" style="width: 100px; height: 100px;">
   &nbsp;
-  <img src="https://github.com/user-attachments/assets/c0e8d5f9-0187-4f9f-a25b-f0ceca766e9b" alt="Logo" style="width: 50px; height: 50px;">
-  <img src="https://github.com/user-attachments/assets/0cd4c798-1524-426d-a303-6bec3f546335" alt="Logo" style="width: 50px; height: 50px;">
-  <img src="https://github.com/user-attachments/assets/6a020024-874a-4ff9-9185-ed2b8d588db0" alt="Logo" style="width: 50px; height: 50px;">
+  <img src="https://github.com/user-attachments/assets/c0e8d5f9-0187-4f9f-a25b-f0ceca766e9b" alt="Logo" style="width: 100px; height: 100px;">
+  <img src="https://github.com/user-attachments/assets/0cd4c798-1524-426d-a303-6bec3f546335" alt="Logo" style="width: 100px; height: 100px;">
+  <img src="https://github.com/user-attachments/assets/6a020024-874a-4ff9-9185-ed2b8d588db0" alt="Logo" style="width: 100px; height: 100px;">
 </div>
 
 
