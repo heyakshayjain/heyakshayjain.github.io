@@ -1,1 +1,5 @@
-
+---
+title: Contact me
+layout: default
+---
+{%- include contact.html -%}
