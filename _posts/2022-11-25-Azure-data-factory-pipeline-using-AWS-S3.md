@@ -6,7 +6,7 @@ In today's multi-cloud world, organizations often leverage various cloud platfor
 One common scenario involves migrating data from an existing Amazon S3 bucket to a new Azure Blob Storage container. This could be for data consolidation, analytics purposes, or disaster recovery strategies. However, manually copying massive datasets between cloud providers can be time-consuming, error-prone, and require significant coding expertise.
 
 **The Solution: Azure Data Factory (ADF) as Your Data Bridge**
-![Architecture Diagram](https://github.com/heyakshayjain/heyakshayjain.github.io/blob/main/_assets/s3toadf.drawio.png)
+![image](https://github.com/heyakshayjain/heyakshayjain.github.io/blob/main/_assets/s3toadf.drawio.png)
 
 Azure Data Factory (ADF) emerges as a powerful solution for orchestrating data movement and transformations across cloud platforms.  It offers a user-friendly interface and eliminates the need for complex scripting. Here's a high-level overview of the process:
 
