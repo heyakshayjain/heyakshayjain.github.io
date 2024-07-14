@@ -24,6 +24,8 @@ I leverage a diverse range of tools and technologies to tackle data challenges:
   <img src="https://github.com/user-attachments/assets/c0e8d5f9-0187-4f9f-a25b-f0ceca766e9b" alt="Logo" style="width: 100px; height: 100px;">
   <img src="https://github.com/user-attachments/assets/0cd4c798-1524-426d-a303-6bec3f546335" alt="Logo" style="width: 100px; height: 100px;">
   <img src="https://github.com/user-attachments/assets/6a020024-874a-4ff9-9185-ed2b8d588db0" alt="Logo" style="width: 100px; height: 100px;">
+  <img src="https://github.com/user-attachments/assets/86fc9b28-d813-43bc-af80-581627c2a94a" alt="Logo" style="width: 100px; height: 100px;">
+
 </div>
 
 
