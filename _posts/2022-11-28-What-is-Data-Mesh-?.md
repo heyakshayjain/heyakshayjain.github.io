@@ -30,10 +30,4 @@ However, Data Fabric does the opposite and it's a centralized data platform arch
 If you want to Read more about Data Mesh and its implementation.I recommend going through this article -
 **How JP Morgan is Implementing a Data Mesh on the AWS Cloud** By [David Vellante](https://www.linkedin.com/in/dvellante/)
 
-<script src="https://utteranc.es/client.js"
-        repo="heyakshayjain/heyakshayjain.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+
