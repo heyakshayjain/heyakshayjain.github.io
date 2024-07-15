@@ -10,8 +10,6 @@ My expertise lies in two key areas:
 
 **Skills and Technologies**
 
-I leverage a diverse range of tools and technologies to tackle data challenges:
-
 
 I leverage a diverse range of tools and technologies to tackle data challenges:
 
