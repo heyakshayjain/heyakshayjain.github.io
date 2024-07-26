@@ -1,5 +1,5 @@
 ---
-title: Data Solutions
+title: Thesis Page
 layout: default
 ---
 {%- include Thesis.html -%}
