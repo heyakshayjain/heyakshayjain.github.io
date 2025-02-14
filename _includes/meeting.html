@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Consultation Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 40px;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main container setup */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-around;
+            flex-grow: 1;
+            padding-bottom: 80px; /* Space for the fixed button */
+        }
+
+        /* Sticky note box setup */
+        .sticky-note {
+            background-color: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            height: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Sticky note priority colors */
+        .high-priority {
+            background-color: #fcdede; /* Light Red */
+            border: 2px solid #f56565;
+        }
+
+        .medium-priority {
+            background-color: #fefcbf; /* Light Yellow */
+            border: 2px solid #ecc94b;
+        }
+
+        .low-priority {
+            background-color: #d4edda; /* Light Green */
+            border: 2px solid #38a169;
+        }
+
+        /* Sticky note header style */
+        .sticky-note-header {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Input fields for the sticky notes */
+        .input-box {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e5e7eb;
+            font-size: 1em;
+            outline: none;
+            height: 100px;
+            resize: none;
+        }
+
+        .input-box:focus {
+            border-color: #4c51bf;
+        }
+
+        /* Fixed Submit Button Styling */
+        .submit-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .submit-button {
+            background-color: #4c51bf;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #434190;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Flexible container for sections */
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Company Information Section -->
+    <div class="section">
+        <div class="section-title">Company Information</div>
+
+        <div class="sticky-note high-priority">
+            <div class="sticky-note-header">Company Overview</div>
+            <textarea class="input-box" placeholder="Briefly describe your company and industry" required></textarea>
+        </div>
+
+        <div class="sticky-note medium-priority">
+            <div class="sticky-note-header">Target Audience</div>
+            <textarea class="input-box" placeholder="Who is your target audience?" required></textarea>
+        </div>
+
+        <div class="sticky-note low-priority">
+            <div class="sticky-note-header">Competitors</div>
+            <textarea class="input-box" placeholder="Who are your main competitors?" required></textarea>
+        </div>
+    </div>
+
+    <!-- Project Goals Section -->
+    <div class="section">
+        <div class="section-title">Project Goals</div>
+
+        <div class="sticky-note medium-priority">
+            <div class="sticky-note-header">Primary Objectives</div>
+            <textarea class="input-box" placeholder="What are the main objectives of this project?" required></textarea>
+        </div>
+
+        <div class="sticky-note high-priority">
+            <div class="sticky-note-header">Success Metrics</div>
+            <textarea class="input-box" placeholder="How will you measure success?" required></textarea>
+        </div>
+
+        <div class="sticky-note low-priority">
+            <div class="sticky-note-header">Timeline</div>
+            <textarea class="input-box" placeholder="What is the expected timeline?" required></textarea>
+        </div>
+    </div>
+
+    <!-- Project Scope Section -->
+    <div class="section">
+        <div class="section-title">Project Scope</div>
+
+        <div class="sticky-note medium-priority">
+            <div class="sticky-note-header">Scope of Work</div>
+            <textarea class="input-box" placeholder="What specific deliverables do you need?" required></textarea>
+        </div>
+
+        <div class="sticky-note low-priority">
+            <div class="sticky-note-header">Preferred Technologies/Platforms</div>
+            <textarea class="input-box" placeholder="Do you have any preferred technologies or platforms?" required></textarea>
+        </div>
+    </div>
+
+    <!-- Risks and Concerns Section -->
+    <div class="section">
+        <div class="section-title">Risks and Concerns</div>
+
+        <div class="sticky-note high-priority">
+            <div class="sticky-note-header">Potential Risks</div>
+            <textarea class="input-box" placeholder="Are there any risks we should be aware of?" required></textarea>
+        </div>
+    </div>
+
+    <!-- Post-Launch Plans Section -->
+    <div class="section">
+        <div class="section-title">Post-Launch Plans</div>
+
+        <div class="sticky-note low-priority">
+            <div class="sticky-note-header">Ongoing Support</div>
+            <textarea class="input-box" placeholder="Will you need ongoing support after launch?" required></textarea>
+        </div>
+
+        <div class="sticky-note medium-priority">
+            <div class="sticky-note-header">Marketing Plans</div>
+            <textarea class="input-box" placeholder="Do you have a plan for post-launch marketing?" required></textarea>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="submit-container">
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
