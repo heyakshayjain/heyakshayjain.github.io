@@ -1,5 +1,5 @@
 ---
-title: Thesis Page
+title: Thesis
 layout: default
 ---
 {%- include Thesis.html -%}
