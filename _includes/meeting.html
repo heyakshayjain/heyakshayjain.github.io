@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Consultation Form</title>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Include Axios for AJAX -->
     <style>
         /* General body styling */
         body {
@@ -26,7 +27,7 @@
             gap: 30px;
             justify-content: space-around;
             flex-grow: 1;
-            padding-bottom: 80px; /* Space for the fixed button */
+            padding-bottom: 120px; /* Space for the fixed button */
         }
 
         /* Sticky note box setup */
@@ -84,6 +85,14 @@
             border-color: #4c51bf;
         }
 
+        /* Attachment input styling */
+        .attachment-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e5e7eb;
+            font-size: 1em;
+        }
+
         /* Fixed Submit Button Styling */
         .submit-container {
             position: fixed;
@@ -110,6 +119,11 @@
             background-color: #434190;
         }
 
+        .submit-button:disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+        }
+
         /* Section Titles */
         .section-title {
             font-size: 1.5em;
@@ -126,6 +140,48 @@
             gap: 20px;
             justify-content: center;
         }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+            padding-top: 60px;
+        }
+
+        /* Modal content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Close button styling */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -137,17 +193,17 @@
 
         <div class="sticky-note high-priority">
             <div class="sticky-note-header">Company Overview</div>
-            <textarea class="input-box" placeholder="Briefly describe your company and industry" required></textarea>
+            <textarea class="input-box" name="company_overview" placeholder="Briefly describe your company and industry" required></textarea>
         </div>
 
         <div class="sticky-note medium-priority">
             <div class="sticky-note-header">Target Audience</div>
-            <textarea class="input-box" placeholder="Who is your target audience?" required></textarea>
+            <textarea class="input-box" name="target_audience" placeholder="Who is your target audience?" required></textarea>
         </div>
 
         <div class="sticky-note low-priority">
             <div class="sticky-note-header">Competitors</div>
-            <textarea class="input-box" placeholder="Who are your main competitors?" required></textarea>
+            <textarea class="input-box" name="competitors" placeholder="Who are your main competitors?" required></textarea>
         </div>
     </div>
 
@@ -157,17 +213,17 @@
 
         <div class="sticky-note medium-priority">
             <div class="sticky-note-header">Primary Objectives</div>
-            <textarea class="input-box" placeholder="What are the main objectives of this project?" required></textarea>
+            <textarea class="input-box" name="primary_objectives" placeholder="What are the main objectives of this project?" required></textarea>
         </div>
 
         <div class="sticky-note high-priority">
             <div class="sticky-note-header">Success Metrics</div>
-            <textarea class="input-box" placeholder="How will you measure success?" required></textarea>
+            <textarea class="input-box" name="success_metrics" placeholder="How will you measure success?" required></textarea>
         </div>
 
         <div class="sticky-note low-priority">
             <div class="sticky-note-header">Timeline</div>
-            <textarea class="input-box" placeholder="What is the expected timeline?" required></textarea>
+            <textarea class="input-box" name="timeline" placeholder="What is the expected timeline?" required></textarea>
         </div>
     </div>
 
@@ -177,12 +233,12 @@
 
         <div class="sticky-note medium-priority">
             <div class="sticky-note-header">Scope of Work</div>
-            <textarea class="input-box" placeholder="What specific deliverables do you need?" required></textarea>
+            <textarea class="input-box" name="scope_of_work" placeholder="What specific deliverables do you need?" required></textarea>
         </div>
 
         <div class="sticky-note low-priority">
             <div class="sticky-note-header">Preferred Technologies/Platforms</div>
-            <textarea class="input-box" placeholder="Do you have any preferred technologies or platforms?" required></textarea>
+            <textarea class="input-box" name="preferred_technologies" placeholder="Do you have any preferred technologies or platforms?" required></textarea>
         </div>
     </div>
 
@@ -192,7 +248,7 @@
 
         <div class="sticky-note high-priority">
             <div class="sticky-note-header">Potential Risks</div>
-            <textarea class="input-box" placeholder="Are there any risks we should be aware of?" required></textarea>
+            <textarea class="input-box" name="potential_risks" placeholder="Are there any risks we should be aware of?" required></textarea>
         </div>
     </div>
 
@@ -202,20 +258,92 @@
 
         <div class="sticky-note low-priority">
             <div class="sticky-note-header">Ongoing Support</div>
-            <textarea class="input-box" placeholder="Will you need ongoing support after launch?" required></textarea>
+            <textarea class="input-box" name="ongoing_support" placeholder="Will you need ongoing support after launch?" required></textarea>
         </div>
 
         <div class="sticky-note medium-priority">
             <div class="sticky-note-header">Marketing Plans</div>
-            <textarea class="input-box" placeholder="Do you have a plan for post-launch marketing?" required></textarea>
+            <textarea class="input-box" name="marketing_plans" placeholder="Do you have a plan for post-launch marketing?" required></textarea>
         </div>
     </div>
 
-    <!-- Submit Button -->
-    <form action="https://formspree.io/f/mwpvrkok" method="POST" class="submit-container">
-        <button type="submit" class="submit-button">Submit</button>
-    </form>
+    <!-- File Attachment Section -->
+    <div class="section">
+        <div class="sticky-note low-priority">
+            <div class="sticky-note-header">Attachment</div>
+            <input type="file" class="attachment-input" name="attachment" />
+        </div>
+    </div>
 </div>
+
+<!-- Submit Button -->
+<div class="submit-container">
+    <button class="submit-button" id="submitButton" onclick="submitForm()">Submit</button>
+</div>
+
+<!-- Modal -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Form submitted successfully!</p>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div id="errorModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeErrorModal()">&times;</span>
+        <p>Please fill in all required fields before submitting.</p>
+    </div>
+</div>
+
+<script>
+    function submitForm() {
+        // Check if all required fields are filled
+        const allFieldsFilled = [...document.querySelectorAll('textarea')].every(textarea => textarea.value.trim() !== '');
+        if (!allFieldsFilled) {
+            document.getElementById("errorModal").style.display = "block";
+            return;  // Prevent submission if any field is empty
+        }
+
+        // Disable the submit button to prevent multiple submissions
+        const submitButton = document.getElementById("submitButton");
+        submitButton.disabled = true;
+
+        const formData = new FormData();
+
+        // Collect form text data
+        document.querySelectorAll('textarea').forEach(textarea => {
+            formData.append(textarea.name, textarea.value);
+        });
+
+        // Collect file data
+        const fileInput = document.querySelector('input[type="file"]');
+        if (fileInput && fileInput.files.length > 0) {
+            formData.append('attachment', fileInput.files[0]);
+        }
+
+        // Send data using Axios (for AJAX request)
+        axios.post('https://formspree.io/f/mwpvrkok', formData, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+        })
+        .then(response => {
+            // Display success modal
+            document.getElementById("successModal").style.display = "block";
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+        });
+    }
+
+    function closeModal() {
+        document.getElementById("successModal").style.display = "none";
+    }
+
+    function closeErrorModal() {
+        document.getElementById("errorModal").style.display = "none";
+    }
+</script>
 
 </body>
 </html>
